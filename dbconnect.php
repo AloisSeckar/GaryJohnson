@@ -1,0 +1,1 @@
+<?php// anonymized for GitHub...// if you wanna re-use the page, you would need to set up your own MySQL connection and adjust variablesclass GJConnectionStrings {	var $MySQL_Host = "---";	var $MySQL_User = "---";	var $MySQL_Pass = "---";	var $MySQL_Db   = "---";}?>
