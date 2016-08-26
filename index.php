@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -20,8 +21,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	$supporters = $mysqli->query("SELECT * FROM gary_johnson ORDER BY id");
 ?>
 
-<!DOCTYPE html>
-<html>
+<?php if ($lang_info=="en") { ?>
+	<html lang="en">
+<?php } else { ?>
+	<html lang="cs">
+<?php } ?>
+
 <head>
 <title>Stand with Gary Johnson</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,20 +57,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </script>
 <!--//ResponsiveTabs-->
 </head>
+
 <body>
 	<!-- main -->
 	<div class="main">
-		<h1><img src="<?=$root_path;?>images/logo.png" title="@govgaryjohnson" alt="" height="100px"></h1>
+		<h1>&nbsp;<img src="<?=$root_path;?>images/logo.png" title="@govgaryjohnson" alt="" height="100">&nbsp;</h1>
 		<div class="main-info w3l">
 			<div class="main-row"><!-- main-row-one -->
 				<div class="profile-grid logo wthree">
-					<p class="languages"><a href="/stand-with-gary-johnson/cs"><img src="<?=$root_path;?>images/cze.png" title="Česky" alt="CZE" width="30px" /></a>&nbsp;&bull;&nbsp;<a href="/stand-with-gary-johnson/en"><img src="<?=$root_path;?>images/gbr.png" title="English" alt="GBR"  width="30px" /></a></p>
+					<p class="languages"><a href="/stand-with-gary-johnson/cs"><img src="<?=$root_path;?>images/cze.png" title="Česky" alt="CZE" width="30" /></a>&nbsp;&bull;&nbsp;<a href="/stand-with-gary-johnson/en"><img src="<?=$root_path;?>images/gbr.png" title="English" alt="GBR"  width="30" /></a></p>
 					<img src="<?=$root_path;?>images/img1.png" title="@govgaryjohnson" alt="">
 					<?php if ($lang_info=="en") { ?>
 						<h2>Dear Mr.&nbsp;Johnson,</h2>
-						<p>we are thrilled to watch your campaign in US&nbsp;Presidential Election and we are admiring all your effort on the long journey that is already behind you. We are pleased to see a&nbsp;raise of a&nbsp;new power disturbing the fusty system and traditional political dogmas.</p>
-						<p>We are free citizens who are not impassive to see who and how is governing us. We wish a&nbsp;world that is quite similar to yours. We believe in economic liberalism and personal freedoms, the values standing in opposition to steadily growing power of the state over people's lives. In the name of good, a&nbsp;lot of evil is being committed today. It is a&nbsp;good thing you are not afraid to face it. You are giving millions of people a&nbsp;chance to vote so, that they don't have to regret it later. Every country in the world should have its own Gary Johnson.</p>
-						<p>Your campaign, whatever the result will be, is already being a&nbsp;great victory for the friends of liberty all around the world. It gives us hope, that not everything has been lost yet, that the things will eventually turn around and all will settle back in order.</p>
+						<p>we are thrilled to watch your campaign in the US&nbsp;Presidential Election and we are admiring all your effort on the long journey that is already behind you. We are pleased to see a&nbsp;raise of a&nbsp;new power disturbing the fusty system and traditional political dogmas.</p>
+						<p>We are free citizens who are not impassive to see who and how is governing us. We wish a&nbsp;world that is quite similar to yours. We believe in economic liberalism and personal freedoms, the values standing in opposition to steadily growing power of the state over people's lives. In the name of good, a&nbsp;lot of evil is being committed today. It is a&nbsp;good thing you are not afraid to face it. You are giving millions of people a&nbsp;chance to vote so, they don't have to regret it later. Every country in the world should have its own Gary Johnson.</p>
+						<p>Your campaign, whatever the result will be, is already being a&nbsp;great victory for the friends of liberty all around the world. It gives us hope that not everything has been lost yet, the things will eventually turn around and all will settle back in order.</p>
 						<p>We thank you and we wish you a&nbsp;lot of success, not only in politics, but in your personal life as well.</p>
 						<p>With best regards, those signed below:</p>
 					<?php } else { ?>
@@ -83,22 +89,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<table class="signatures">
 						<?php foreach ($supporters as $supporter) { ?>
 							<tr>
-								<td width="25%" style="font-weight: bold;">
+								<td style="font-weight: bold; width: 30%;">
 									<?php if ($supporter["web"]!="null") { ?> 
 										<a href="<?=$supporter["web"];?>" target="_blank"><?=$supporter["name"];?></a>
 									<?php } else { ?>
 										<?=$supporter["name"];?>
 									<?php } ?>
 								</td>
-								<td width="10%">
+								<td style="width: 10%;">
 									<?php if ($supporter["age"]>0) { 
 										echo $supporter["age"];
 									} else {
 										echo "-";
 									} ?>
 								</td>
-								<td width="25%"><?=$supporter["loc"];?></td>
-								<td width="40%"><?=$supporter["dscr"];?></td>
+								<td style="width: 25%;"><?=$supporter["loc"];?></td>
+								<td style="width: 35%;"><?=$supporter["dscr"];?></td>
 							</tr>
 						<?php } ?>
 					</table>
@@ -128,13 +134,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</ul>	
 					</div>
 				<div class="clear"> </div>
+				<!-- hitwebcounter Code START -->
+				<div style="width=100%; text-align: center; padding-top: 1.5em;">
+					<a href="http://www.hitwebcounter.com" target="_blank"><img src="http://hitwebcounter.com/counter/counter.php?page=6478702&style=0027&nbdigits=7&type=ip&initCount=20" title="Web page hit counter" alt="Web page hit counters codes Free" style="border: 0;" /></a><br/>
+					<!-- hitwebcounter.com --><a href="http://www.hitwebcounter.com" title="Measure Website Visitors" target="_blank" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #758087; text-decoration: none;"><strong>Measure Website Visitors</strong></a>
+				</div>
+				<!-- hitwebcounter Code END-->
 			</div>
 		<!-- copyright -->
 		<div class="copyright">
 			<hr />
-			<p>© 2016 Web by <a href="http://alois-seckar.cz/"_blank">Alois Seckar</a>.
+			<p>© 2016 Web by <a href="http://alois-seckar.cz/" target="_blank">Alois Seckar</a>.
 			<br />Pictures from  <a href="https://www.johnsonweld.com/" target="_blank">https://www.johnsonweld.com/</a>.
-			<br />Icons by <a href="http://www.designbolts.com/author/zee-que/"target="_blank">Zee Qee</a>. 
+			<br />Icons by <a href="http://www.designbolts.com/author/zee-que/" target="_blank">Zee Qee</a>. 
 			<br />© 2016 Based on Skills Profile Widget design.<br />All rights reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts.</a></p>
 		</div>
 		<!-- //copyright -->

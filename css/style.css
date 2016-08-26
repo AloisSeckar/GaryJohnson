@@ -595,7 +595,7 @@ h3.title {
 	color: #fff;
 	vertical-align: middle;
 	padding-top: 0.4em;
-	padding-bottom: 0.3em;
+	padding: 0.3em;
 	border-top: 1px solid #fff;
 }
 .signatures a {
