@@ -109,6 +109,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<?php } ?>
 					</table>
 				</div>
+				
+				<div class="profile-grid logo">
+					<?php if ($lang_info=="en") { ?>
+						<h3>Who is Gary Johnson?</h3>
+						<p>Gary Johnson is the presidential candidate of <a href="https://www.lp.org/" target="_blank">The Libertarian Party</a> in the US presidential election 2016. He is still "the third behind", but his support is attacking 15% and keeps rising. For many Americans he is the savior from choosing a lesser evil between Hillary Clinton and Donald Trump.</p>
+						<p>How is Gary Johnson and what are his political views? He served two terms as the governor of New Mexico, where he didn't hesitate to apply the libertarian principles - and successfully! British conservative MEP <a href="http://www.ronpaulforums.com/showthread.php?306055-Daniel-Hannan-British-MEP-on-Gary-Johnson" target="_blank">Daniel Hannan wrote about it</a> couple of years ago.</p>
+						<p>Gary Johnson offers his brief program <a href="https://www.johnsonweld.com/issues" target="_blank">on his campaign website</a>.</p>
+					<?php } else { ?>
+						<h3>Kdo je Gary Johnson?</h3>
+						<p>Gary Johnson je kandidát <a href="https://www.lp.org/" target="_blank">Libertariánské strany USA</a> na prezidenta Spojených států amerických v roce 2016. Je stále "ten třetí vzadu", ale jeho podpora již atakuje 15% a dále roste. Pro mnoho Američanů je vysvobozením z volby menšího zla mezi Hilary Clinton a Donaldem Trumpem.</p>
+						<p>Jaký Gary Johnson je a jakou politiku zastává? Je to dvojnásobný guvernér Nového Mexika, který neváhal uvádět svobodné myšlenky v praxi - a úspěšně! Již před lety <a href="https://web.svobodni.cz/clanky/hannan-gary-johnson-libertariansky-kandidat-na-prezidenta-usa" target="_blank">o tom psal Daniel Hannan</a>, známý britský konzervativní europoslanec.</p>
+						<p>Svůj program nabízí Gary Johnson ve stručnosti <a href="https://www.johnsonweld.com/issues" target="_blank">na svém volebním webu</a> (v angličtině).</p>
+					<?php } ?>
+				</div>
+				
 				<div class="profile-grid logo">
 					<?php if ($lang_info=="en") { ?>
 						<h3>I want to support Gary Johnson too!</h3>

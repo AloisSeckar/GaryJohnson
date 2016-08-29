@@ -595,8 +595,15 @@ h3.title {
 	color: #fff;
 	vertical-align: middle;
 	padding-top: 0.4em;
-	padding: 0.3em;
+	padding-bottom: 0.3em;
+	padding-left: 3px;
+	padding-right: 3px;
 	border-top: 1px solid #fff;
+}
+@media(max-width:600px){
+.signatures td{
+	word-break: break-all;
+}
 }
 .signatures a {
 	color: #fec52e;
