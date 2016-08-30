@@ -19,6 +19,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	$mysqli->set_charset("utf8");
 	// get supporters from DB
 	$supporters = $mysqli->query("SELECT * FROM gary_johnson ORDER BY id");
+	// get their number
+	$result = $mysqli->query("SELECT count(*) AS value FROM gary_johnson");
+	$sup_count = $result->fetch_array();
 ?>
 
 <?php if ($lang_info=="en") { ?>
@@ -107,27 +110,38 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<td style="width: 35%;"><?=$supporter["dscr"];?></td>
 							</tr>
 						<?php } ?>
+						<tr>
+							<td colspan="4" style="font-weight: bold; font-size: 0.8em; text-align: center;">
+								<?php 
+								if ($lang_info=="en") {
+									echo "Signatures: ".$sup_count["value"];
+								} else { 
+									echo "Celkem podpisů: ".$sup_count["value"];
+								} 
+								?>
+							</td>
+						</tr>
 					</table>
 				</div>
 				
 				<div class="profile-grid logo">
 					<?php if ($lang_info=="en") { ?>
 						<h3>Who is Gary Johnson?</h3>
-						<p>Gary Johnson is the presidential candidate of <a href="https://www.lp.org/" target="_blank">The Libertarian Party</a> in the US presidential election 2016. He is still "the third behind", but his support is attacking 15% and keeps rising. For many Americans he is the savior from choosing a lesser evil between Hillary Clinton and Donald Trump.</p>
-						<p>How is Gary Johnson and what are his political views? He served two terms as the governor of New Mexico, where he didn't hesitate to apply the libertarian principles - and successfully! British conservative MEP <a href="http://www.ronpaulforums.com/showthread.php?306055-Daniel-Hannan-British-MEP-on-Gary-Johnson" target="_blank">Daniel Hannan wrote about it</a> couple of years ago.</p>
+						<p>Gary Johnson is the presidential candidate of <a href="https://www.lp.org/" target="_blank">The Libertarian Party</a> in the US presidential election 2016. He is still "the third behind", but his support is attacking 15% and keeps rising. For many Americans he is the savior from choosing a&nbsp;lesser evil between Hillary Clinton and Donald Trump.</p>
+						<p>How is Gary Johnson and what are his political views? He served two terms as the governor of New Mexico, where he didn't hesitate to apply the libertarian principles -&nbsp;and successfully! British conservative MEP <a href="http://www.ronpaulforums.com/showthread.php?306055-Daniel-Hannan-British-MEP-on-Gary-Johnson" target="_blank">Daniel Hannan wrote about it</a> couple of years ago.</p>
 						<p>Gary Johnson offers his brief program <a href="https://www.johnsonweld.com/issues" target="_blank">on his campaign website</a>.</p>
 					<?php } else { ?>
 						<h3>Kdo je Gary Johnson?</h3>
-						<p>Gary Johnson je kandidát <a href="https://www.lp.org/" target="_blank">Libertariánské strany USA</a> na prezidenta Spojených států amerických v roce 2016. Je stále "ten třetí vzadu", ale jeho podpora již atakuje 15% a dále roste. Pro mnoho Američanů je vysvobozením z volby menšího zla mezi Hilary Clinton a Donaldem Trumpem.</p>
-						<p>Jaký Gary Johnson je a jakou politiku zastává? Je to dvojnásobný guvernér Nového Mexika, který neváhal uvádět svobodné myšlenky v praxi - a úspěšně! Již před lety <a href="https://web.svobodni.cz/clanky/hannan-gary-johnson-libertariansky-kandidat-na-prezidenta-usa" target="_blank">o tom psal Daniel Hannan</a>, známý britský konzervativní europoslanec.</p>
-						<p>Svůj program nabízí Gary Johnson ve stručnosti <a href="https://www.johnsonweld.com/issues" target="_blank">na svém volebním webu</a> (v angličtině).</p>
+						<p>Gary Johnson je kandidát <a href="https://www.lp.org/" target="_blank">Libertariánské strany USA</a> na prezidenta Spojených států amerických v&nbsp;roce 2016. Je stále "ten třetí vzadu", ale jeho podpora již atakuje 15% a&nbsp;dále roste. Pro mnoho Američanů je vysvobozením z&nbsp;volby menšího zla mezi Hilary Clinton a&nbsp;Donaldem Trumpem.</p>
+						<p>Jaký Gary Johnson je a&nbsp;jakou politiku zastává? Je to dvojnásobný guvernér Nového Mexika, který neváhal uvádět svobodné myšlenky v praxi -&nbsp;a&nbsp;úspěšně! Již před lety <a href="https://web.svobodni.cz/clanky/hannan-gary-johnson-libertariansky-kandidat-na-prezidenta-usa" target="_blank">o&nbsp;tom psal Daniel Hannan</a>, známý britský konzervativní europoslanec.</p>
+						<p>Svůj program nabízí Gary Johnson ve stručnosti <a href="https://www.johnsonweld.com/issues" target="_blank">na svém volebním webu</a> (v&nbsp;angličtině).</p>
 					<?php } ?>
 				</div>
 				
 				<div class="profile-grid logo">
 					<?php if ($lang_info=="en") { ?>
 						<h3>I want to support Gary Johnson too!</h3>
-						<p>If you want to attach your name under this open letter, please contact me via <a href="mailto:seckar@svobodni.cz">seckar@svobodni.cz</a>.<br />Other info than your name is voluntary. You can add a link to your personal web displayed under your name.</p>
+						<p>If you want to attach your name under this open letter, please contact me via <a href="mailto:seckar@svobodni.cz">seckar@svobodni.cz</a>.<br />Other info than your name is voluntary. You can add a&nbsp;link to your personal web displayed under your name.</p>
 					<?php } else { ?>
 						<h3>Chci také podpořit Garyho Johnsona!</h3>
 						<p>Máte-li zájem připojit své jméno pod tento otevřený dopis, kontaktujte mě prosím emailem na <a href="mailto:seckar@svobodni.cz">seckar@svobodni.cz</a>.<br />Další údaje mimo jména jsou dobrovolné. Můžete připojit též odkaz na váš osobní web zobrazený po najetí na vaše jméno.</p>
