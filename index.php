@@ -64,7 +64,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
 	<!-- main -->
 	<div class="main">
-		<h1>&nbsp;<img src="<?=$root_path;?>images/logo.png" title="@govgaryjohnson" alt="" height="100">&nbsp;</h1>
+		<h1>&nbsp;<img src="<?=$root_path;?>images/logo.png" title="@govgaryjohnson" alt="" height="100px;" />&nbsp;</h1>
 		<div class="main-info w3l">
 			<div class="main-row"><!-- main-row-one -->
 				<div class="profile-grid logo wthree">
